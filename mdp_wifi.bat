@@ -25,8 +25,6 @@ goto x
 set /a count+=1
 set /a lim=9+%counter%-6
 if %count% LSS %lim% goto :y
-echo %Num[9]%
-echo %Num[10]%
 
 set c=0
 :z
