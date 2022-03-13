@@ -1,3 +1,6 @@
+:: pour pouvoir recuperer les mdp, le fichier doit etre lancer en mode administrateur. Sans ca, il ne recuperera que les noms des points d'acces wifi.
+:: un fois le programme lancer, un fichier texte "mdp_wifi.txt" sera créé avec les infos des points d'acces wifi.
+
 CHCP 65001
 SETLOCAL EnableDelayedExpansion
 echo MOT DE PASSE WIFI >mdp_wifi.txt
