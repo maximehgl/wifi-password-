@@ -3,11 +3,11 @@
 
 CHCP 65001
 SETLOCAL EnableDelayedExpansion
-echo MOT DE PASSE WIFI >mdp_wifi.txt
+echo MOT DE PASSE WIFI >"G:\mpdwifi.txt"
 
-echo                                                                    .>>mdp_wifi.txt
-echo -------------------------------------------------------------------->>mdp_wifi.txt
-echo                                                                    .>>mdp_wifi.txt
+echo                                                                    .>>"G:\mpdwifi.txt"
+echo -------------------------------------------------------------------->>"G:\mpdwifi.txt"
+echo                                                                    .>>"G:\mpdwifi.txt"
 set command=%netsh wlan show profiles
 
 
@@ -40,10 +40,10 @@ echo !num! >> mdp_wifi.txt
 set /a c+=1
 set /a n=%counter%-6
 echo %n%
-netsh wlan show profiles name= "%num%" key=clear | findstr "Key" >> mdp_wifi.txt
-echo                                                                    .>>mdp_wifi.txt
-echo -------------------------------------------------------------------->>mdp_wifi.txt
-echo                                                                    .>>mdp_wifi.txt
+netsh wlan show profiles name= "%num%" key=clear | findstr "Key" >> "G:\mpdwifi.txt"
+echo                                                                    .>>"G:\mpdwifi.txt"
+echo -------------------------------------------------------------------->>"G:\mpdwifi.txt"
+echo                                                                    .>>"G:\mpdwifi.txt"
 if %c% LSS %n% goto :z
 
 
