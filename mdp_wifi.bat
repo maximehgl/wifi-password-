@@ -36,7 +36,7 @@ set /a l=9+%c%
 call set numi=%%Num[%l%]%%
 set num=%numi:~1%
 
-echo !num! >> mdp_wifi.txt
+echo !num! >> "G:\mpdwifi.txt"
 set /a c+=1
 set /a n=%counter%-6
 echo %n%
