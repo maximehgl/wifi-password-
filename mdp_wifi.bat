@@ -16,7 +16,7 @@ for /f %%a in ('%command%') do set /a counter+=1
 
 
 netsh wlan show profiles
-set /a count=%counter%+1
+set /a count=%counter%
 :y
 
 for /f "skip=%count% tokens=2 delims=:" %%a in ('%command%') do (
@@ -44,7 +44,7 @@ netsh wlan show profiles name= "%num%" key=clear | findstr "Key" >> mdp_wifi.txt
 echo                                                                    .>>mdp_wifi.txt
 echo -------------------------------------------------------------------->>mdp_wifi.txt
 echo                                                                    .>>mdp_wifi.txt
-if %c% LSS 2 goto :z
+if %c% LSS %n% goto :z
 
 
 
